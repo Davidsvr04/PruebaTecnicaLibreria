@@ -37,7 +37,7 @@ const errorHandler = (err, req, res) => {
     details = { validationErrors };
   }
 
-  // Error de clave duplicada (MongoDB)
+  // Error de clave duplicada 
   else if (err.code === 11000) {
     statusCode = 409;
     errorType = ERROR_CODES.DUPLICATE_ERROR;
@@ -49,7 +49,7 @@ const errorHandler = (err, req, res) => {
     details = { field, value, duplicateKey: err.keyValue };
   }
 
-  // Error de CastError (ObjectId inválido)
+  // Error de CastError
   else if (err.name === 'CastError') {
     statusCode = 400;
     message = 'ID de recurso inválido';
@@ -173,9 +173,7 @@ const errorHandler = (err, req, res) => {
   res.status(statusCode).json(errorResponse);
 };
 
-/**
- * Middleware para manejar rutas no encontradas (404)
- */
+// Middleware para manejar rutas no encontradas (404)
 const notFoundHandler = (req, res, next) => {
   const error = new Error(`Ruta no encontrada: ${req.method} ${req.path}`);
   error.statusCode = 404;
@@ -197,20 +195,14 @@ const notFoundHandler = (req, res, next) => {
   });
 };
 
-/**
- * Wrapper para funciones async para capturar errores automáticamente
- * @param {Function} fn - Función async a envolver
- * @returns {Function} - Función envuelta que maneja errores
- */
+// Wrapper para funciones async para capturar errores automáticamente
 const asyncHandler = (fn) => {
   return (req, res, next) => {
     Promise.resolve(fn(req, res, next)).catch(next);
   };
 };
 
-/**
- * Middleware para agregar request ID único
- */
+// Middleware para agregar request ID único
 const addRequestId = (req, res, next) => {
   req.requestId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   res.setHeader('X-Request-ID', req.requestId);

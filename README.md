@@ -79,11 +79,11 @@ o puedes crear un usuario desde la app
 
 
 
-# 📚 Book Management System - Frontend
+# Book Management System - Frontend
 
 Una interfaz web moderna y atractiva para gestionar una biblioteca personal, desarrollada con HTML, CSS y JavaScript vanilla.
 
-## ✨ Características
+## Características
 
 - **Autenticación**: Login y registro de usuarios
 - **Dashboard**: Vista general con estadísticas y libros recientes
@@ -92,7 +92,7 @@ Una interfaz web moderna y atractiva para gestionar una biblioteca personal, des
 - **Estados**: Manejo de libros disponibles y reservados
 - **Responsive**: Adaptable a diferentes tamaños de pantalla
 
-## 🛠 Tecnologías
+## Tecnologías
 
 - **HTML5**: Estructura semántica
 - **CSS3**: Estilos modernos con variables CSS y Grid/Flexbox
@@ -100,7 +100,7 @@ Una interfaz web moderna y atractiva para gestionar una biblioteca personal, des
 - **Font Awesome**: Iconos
 - **Google Fonts**: Tipografía Inter
 
-## 🚀 Instalación y Uso
+## Instalación y Uso
 
 1. **Clonar o descargar** los archivos en tu directorio de trabajo
 
@@ -108,7 +108,7 @@ Una interfaz web moderna y atractiva para gestionar una biblioteca personal, des
    - Abre `index.html` en tu navegador web
    - O usa un servidor local como Live Server en VS Code
 
-## 📱 Funcionalidades
+## Funcionalidades
 
 ### Autenticación
 - **Login**: Ingresa con email y contraseña
@@ -133,7 +133,7 @@ Una interfaz web moderna y atractiva para gestionar una biblioteca personal, des
 - **Autor**: Filtro específico por autor
 - **Limpiar**: Reset de todos los filtros
 
-## 🔧 API Integration
+## API Integration
 
 ### Configuración
 ```javascript
@@ -150,7 +150,7 @@ const API_BASE_URL = 'http://localhost:5000/api';
 - Persistencia en localStorage
 - Redirect automático en expiración
 
-## 🔒 Seguridad
+## Seguridad
 
 - **XSS Protection**: Escape de HTML en contenido dinámico
 - **Token Validation**: Verificación en cada request

@@ -14,7 +14,7 @@ const authMiddleware = async (req, res, next) => {
       });
     }
 
-    const token = authHeader.slice(7); // Quitar "Bearer "
+    const token = authHeader.slice(7);
 
     // Verificar token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);

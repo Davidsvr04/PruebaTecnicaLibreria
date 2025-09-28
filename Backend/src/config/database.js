@@ -7,10 +7,8 @@ const connectDB = async () => {
     console.log(`MongoDB Conectado: ${conn.connection.host}`);
     console.log(`Base de datos: ${conn.connection.name}`);
     
-    // Configuración adicional de mongoose
     mongoose.set('strictQuery', false);
     
-    // Event listeners para la conexión
     mongoose.connection.on('error', (err) => {
       console.error('Error de conexión MongoDB:', err);
     });
