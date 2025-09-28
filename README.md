@@ -19,7 +19,8 @@ API REST para gestionar una biblioteca con autenticación JWT y base de datos Mo
 - Joi (validación)
 - Swagger
 
-## Configuración
+## Importante tener presente
+- El repositorio tiene las 2 carpetas, para correr el back tienen que acceder primero a cd Backend y luego instalan dependencias, deje el .env publico para que puedan tener las credenciales de mi base de datos de mongo y deje la ip publica durante una semana para que los permita usarla, muchas gracias.
 
 ### Prerrequisitos
 
