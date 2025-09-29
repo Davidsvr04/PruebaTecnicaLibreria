@@ -22,6 +22,15 @@ API REST para gestionar una biblioteca con autenticación JWT y base de datos Mo
 ## Importante tener presente
 - El repositorio tiene las 2 carpetas, para correr el back tienen que acceder primero a cd Backend y luego instalan dependencias, deje el .env con datos de ejemplo por favor cambiarlos por las credenciales asignadas en el correo  para que puedan tener accesi a mi base de datos de mongo, muchas gracias.
 
+- Si prefieres Puedes crear tu propia base de datos en mongo Atlas y poner tu credencial, luego te aseguras de (cd Backend) , node src/seedDatabase.js y lo corres con npm run seed ya que asi lo inicialice en el package.json, este archivo lo que hace es crearte directamente los modelos con datos de prueba
+
+{
+  "scripts": {
+    "seed": "node src/seedDatabase.js",
+    "seed:dev": "NODE_ENV=development node src/seedDatabase.js"
+  }
+}
+
 
 ### Prerrequisitos
 
